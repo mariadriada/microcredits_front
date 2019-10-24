@@ -1,0 +1,17 @@
+.magic-box{
+    padding: 1rem;
+}
+
+.message-container{
+    height: 200px;
+    background-color: beige;
+    margin-top: 1rem;
+}
+
+.bg-red{
+    background-color: pink;
+}
+
+.bg-blue{
+    background-color: blue;
+}

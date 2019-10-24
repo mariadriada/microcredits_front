@@ -1,0 +1,16 @@
+.home{
+    width: 50%;
+    background-color:#263238;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: .5rem;
+    color: white;
+
+    h2{
+        padding: 2rem 0 2rem 0;
+        //color: red;
+    }
+}
