@@ -22,6 +22,39 @@ export default class SignUp extends Component {
             data.cedula = e.target.elements[2].value
             data.email = e.target.elements[3].value
             data.clave = e.target.elements[4].value
+            data.id = e.target.elements[2].value
+
+            // Create user in the api
+            const URL = "https://intense-eyrie-82400.herokuapp.com/api/users/create"
+            // Request to create user with POST method
+            fetch(URL, {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': "Application/json",
+                    'Access-Control-Allow-Origin': '*',
+                    'charset': 'UTF-8'
+                }
+            })
+            .then(res => res.json())
+            .then(res => {
+                console.log('Ok', res)
+                // Redirect to login
+                if(res.status===201) this.props.history.push('/')
+                else{
+                    this.setState({
+                        error: true,
+                        errorMessage: res.error
+                    })
+                }
+            })
+            .catch(err => {
+                console.log("err", err)
+                this.setState({
+                    error: true,
+                    errorMessage: err
+                })
+            })
         }
         else{
             console.log("Passwords not match")
