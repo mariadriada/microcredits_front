@@ -7,6 +7,7 @@ import Users from "./components/Users"
 import Credits from "./components/Credits"
 import Contact from "./components/Contact"
 import SignUp from "./components/SignUp"
+import Test from "./components/test"
 import './App.scss'
 
 const history = createBrowserHistory()
@@ -19,6 +20,7 @@ function App() {
       <Route path="/credits" component={Credits} />
       <Route path="/contact" component={Contact} />
       <Route path="/sign-up" component={SignUp} />
+    
     </Router>
   )
 }

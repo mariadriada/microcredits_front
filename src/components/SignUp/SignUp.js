@@ -36,6 +36,7 @@ export default class SignUp extends Component {
                     'charset': 'UTF-8'
                 }
             })
+            
             .then(res => res.json())
             .then(res => {
                 console.log('Ok', res)
